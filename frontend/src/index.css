@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Caveat:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    .quoteContainer > div {
+        width: 100%;
+    }
+
+    .quoteContainer {
+        margin: 1rem 0rem;
+    }
+
+    .quoteWrapper {
+        margin: 1.3rem 1rem 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 960px) {
+    html {
+        font-size: 13px;
+    }
+
+    .quoteWrapper {
+        font-size: 1.5rem;
+    }
+}
+
+body {
+    background: #0F0A00;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'IBM Plex Serif', serif;
+    overflow: hidden;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.content-container {
+    position: relative; 
+    max-width: 1440px;
+    height: 100svh;
+    overflow-y: scroll;
+    margin: 0 auto;
+    background: #0F0A00;
+}
+
+.content-container::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
+.fixed-container {
+    max-width: 1440px;
+    position: fixed;
+    height: 10rem;
+    width: 100%;
+    z-index: 1000;
+    bottom: 0rem;
+    display: flex;
+    pointer-events: none;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0rem 0rem 1rem 0.3rem;
+}
+
+.imgDesc {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-style: italic;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.5rem;
+    color: #92793f;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-family: "IBM Plex Serif", serif;
+}
+
+sub { 
+    top: 0.4rem; 
+}
+
+.emptyLine {
+    height: 2rem;
+    width: 100%;
+};
+
+.space {
+    height: 0.5rem;
+    width: 100%;
+};
