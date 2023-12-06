@@ -13,7 +13,18 @@ export const requestPage = async (url) => {
 
 export const requestPoet = async (id) => {
     try {
-        const response = await axios.get(`http://localhost:8000/poets`, {
+        const response = await axios.get(`http://localhost:8000/language/poets`, {
+            params: {id : id}
+        });
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+};
+
+export const requestRecipe = async (id) => {
+    try {
+        const response = await axios.get(`http://localhost:8000/cuisine/recipes`, {
             params: {id : id}
         });
         return response.data;

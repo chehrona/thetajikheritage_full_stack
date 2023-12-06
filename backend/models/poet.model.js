@@ -27,7 +27,6 @@ module.exports = mongoose => {
                 card: { type: String, required: true },
                 main: { type: String, required: true },
             },
-            link: { type: String, required: true },
             sections: {
                 us: { type: [String], required: true },
                 ru: { type: [String], required: true },

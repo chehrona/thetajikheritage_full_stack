@@ -3,6 +3,7 @@ import { Tooltip } from "../tooltip/Tooltip";
 import { StyledSpan } from "./descWrapperStyles";
 
 export const DescWrapper = ({ desc, TextWrapper }) => {
+
     const renderContent = () => {
         return Object.keys(desc).map((key) => {
             const content = desc[key];

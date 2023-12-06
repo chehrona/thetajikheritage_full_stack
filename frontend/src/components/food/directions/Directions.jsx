@@ -13,7 +13,7 @@ export default function Directions({ recipe }) {
     
     return (
         <MainContainer height={recipe?.height}>
-            <SubTitle>{recipe.directionsLang[lang]}</SubTitle>
+            <SubTitle>{lang === "us" ? "Directions" : (lang === "ru" ? "Приготовление" : "Тарзи омодакунӣ")}</SubTitle>
             <div>
                 {recipe.directions[lang].map((piece, i) => {
                     return (

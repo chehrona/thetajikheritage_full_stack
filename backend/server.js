@@ -7,7 +7,7 @@ app.use(cors(corsOptions));
 // Routes
 const homeRoutes = require('./routes/homeRoutes');
 const languageRoutes = require('./routes/languageRoutes');
-const poetRoutes = require('./routes/poetRoutes');
+const cuisineRoutes = require('./routes/cuisineRoutes');
 
 const db = require("./models");
 db.mongoose
@@ -37,7 +37,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Use route files
 app.use('/', homeRoutes);
 app.use('/language', languageRoutes);
-app.use('/poets', poetRoutes);
+app.use('/cuisine', cuisineRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8000;

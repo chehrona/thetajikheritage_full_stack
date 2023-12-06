@@ -13,7 +13,7 @@ export default function RecipeIngredients({ recipe }) {
 
     return (
         <MainContainer>
-            <SubTitle>{recipe.ingredientsLang[lang]}</SubTitle>
+            <SubTitle>{lang === "us" ? "Ingredients" : (lang === "ru" ? "Ингредиенты" : "Маҳсулот")}</SubTitle>
             {recipe.ingredients[lang].map((piece, i) => {
                 return (
                     <Ingredient key={i}>

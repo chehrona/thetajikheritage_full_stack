@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { findAll } = require('../controllers/languageController');
+const { getAllPoets, getPoet } = require('../controllers/languageController');
 
-router.get('/', findAll);
+router.get('/', getAllPoets);
+router.get('/poets', getPoet);
 
 module.exports = router;

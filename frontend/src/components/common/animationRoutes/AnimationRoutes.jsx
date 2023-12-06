@@ -20,8 +20,8 @@ export default function AnimationRoutes() {
             <Routes location={location} key={location.pathname}>
                 <Route path="/arts" element={<Arts />} />
                 <Route path="/customs" element={<Customs />} />
-                <Route path="/cuisine/:id" element={<RecipePage />} />
-                <Route path="/cuisine/:id/print" element={<RecipePagePrint />} />
+                <Route path="/cuisine/recipes/:id" element={<RecipePage />} />
+                <Route path="/cuisine/recipes/:id/print" element={<RecipePagePrint />} />
                 <Route path="/cuisine" element={<Cuisine />} />
                 <Route path="/language" element={<Language />} />
                 <Route path="/language/poets/:id" element={<PoetPage />} />

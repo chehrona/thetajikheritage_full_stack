@@ -13,7 +13,7 @@ export const StyledSpan = styled.span`
     };
 
     .quoteSymbol {
-        background-image: url('./quotation.png');
+        background-image: url('/quotation.png');
         background-size: 100%;
         background-repeat: no-repeat;
         height: 7rem;

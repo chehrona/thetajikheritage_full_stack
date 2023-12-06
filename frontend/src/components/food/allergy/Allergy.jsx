@@ -18,7 +18,7 @@ export default function Allergy({ recipe }) {
         <AllergyContainer>
             {recipe.contains && 
                 <ContentBox>
-                    <BoxTitle>{recipe?.containsLang[lang]}</BoxTitle>
+                    <BoxTitle>{lang === "us" ? "Contains" : (lang === "ru" ? "Содержит" : "Дорад")}</BoxTitle>
                     <LabelWrapper>
                         {recipe?.contains?.map((label, i) => {
                             return (
@@ -35,7 +35,7 @@ export default function Allergy({ recipe }) {
             }
             {recipe.diet && 
                 <ContentBox>
-                    <BoxTitle>{recipe?.dietLang[lang]}</BoxTitle>
+                    <BoxTitle>{lang === "us" ? "Diet" : (lang === "ru" ? "Диета" : "Парҳез")}</BoxTitle>
                     <LabelWrapper>
                         {recipe?.diet.map((label, i) => {
                             return (

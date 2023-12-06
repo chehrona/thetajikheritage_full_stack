@@ -38,7 +38,7 @@ export default function RecipeInfo({ recipe }) {
                 <MainImage src={recipe?.mainImg} />
             </ImageContainer>
             <MainTitle>{recipe.title[lang]}</MainTitle>
-            <DescWrapper desc={recipe.history[lang].desc} TextWrapper={HistoryInfo} />
+            <DescWrapper desc={recipe?.history[lang]} TextWrapper={HistoryInfo} />
         </InfoContainer>
     )
 }

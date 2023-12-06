@@ -1,7 +1,7 @@
 const db = require("../models");
 const Poet = db.poet;
 
-exports.findAll = async (req, res) => {
+exports.getAllPoets = async (req, res) => {
     try {
         const poets = await Poet.find({});
         const poetIntro = poets.map((poet) => {
@@ -11,11 +11,8 @@ exports.findAll = async (req, res) => {
                 years: poet.years,
                 desc: poet.desc,
                 img: poet.img.card,
-                link: poet.link
             }
         });
-
-        console.log("I am called **********************")
 
         res.json(poetIntro);
     } catch (error) {
@@ -24,7 +21,7 @@ exports.findAll = async (req, res) => {
     }
 };
 
-exports.findPoet = async (req, res) => {
+exports.getPoet = async (req, res) => {
     const id = req.query.id;
 
     try {

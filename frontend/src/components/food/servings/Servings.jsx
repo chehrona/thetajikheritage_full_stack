@@ -17,11 +17,11 @@ export default function Servings({ servings, setServings }) {
     const { lang } = useSetLang();
 
     useEffect(() => {
-        if (servings.length > 0 && !parseInt(servings)) {
+        if (servings?.length > 0 && !parseInt(servings)) {
             setServings(1);
         } 
 
-        if (servings.length > 0 && servings < 0) {
+        if (servings?.length > 0 && servings < 0) {
             setServings(1);
         }
     }, [servings]);

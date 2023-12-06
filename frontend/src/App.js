@@ -1,11 +1,10 @@
-import { useContext, createContext, useMemo, useState, useRef, useEffect } from 'react';
+import { useContext, createContext, useMemo, useState, useRef } from 'react';
 import Header from './components/common/header/Header';
 import Menu from './components/common/menu/Menu';
 import Footer from './components/common/footer/Footer';
 import AnimationRoutes from './components/common/animationRoutes/AnimationRoutes';
 import Flags from './components/common/flags/Flags';
 import ScrollUpArrow from './components/common/scrollUpArrow/ScrollUpArrow';
-import AdSense from './components/common/adSense/AdSense';
 
 const LangContext = createContext({
     lang: 'us',
@@ -56,7 +55,6 @@ function App() {
                     {!isPrint && <Flags />}
                     {showArrow ? <ScrollUpArrow parentRef={parentRef} /> : null}
                 </div>
-                <AdSense />
                 {!isPrint ? <Footer /> : null}
             </div>
         </LangContext.Provider>
