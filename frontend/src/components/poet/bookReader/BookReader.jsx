@@ -23,7 +23,6 @@ export default function BookReader({ book, setOpenBook }) {
     }
 
     useEffect(() => {
-        const fileName = '/storage/poetBooks/ayni/tj/revolution.pdf';
         axios.get(book.link, { responseType: 'arraybuffer' })
             .then(response => {
                 const blob = new Blob([response.data], { type: 'application/pdf' });

@@ -95,11 +95,7 @@ export const MovieCard = styled.div`
 export const Image = styled.img`
     max-width: 100%;
     height: 100%;
-    border-radius: 0.1rem;
-
-    @media (max-width: 1024px) {
-        border-radius: 0.5rem;
-    }
+    border-radius: 0.5rem;
 `;
 
 export const StyledIconButton = styled(IconButton)`

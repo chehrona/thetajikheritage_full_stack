@@ -9,7 +9,6 @@ export default function PoetWorks({ poet }) {
     const { lang } = useSetLang();
     const isMobile = useMediaQuery({ query: `(max-width: 480px)` });
     const [overlay, setOverlay] = useState(null);
-
     const numBooks = poet[lang].length;
     let shelfNum;
 
