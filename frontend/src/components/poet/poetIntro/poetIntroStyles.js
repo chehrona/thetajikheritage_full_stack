@@ -74,6 +74,10 @@ export const Overlay = styled.div`
     height: 100%;
     background-image: url(${'/noise.png'});
     border-radius: 4rem 4rem 0rem 0rem;
+
+    @media (max-width: 480px) {
+        border-radius: 0rem;
+    }
 `;
 
 export const FadedImage = styled.img`

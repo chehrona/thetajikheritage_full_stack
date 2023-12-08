@@ -50,7 +50,7 @@ export const LogoContainer = styled.div`
         opacity: 0.3;
         width: 100%;
         position: absolute;
-        right: -53.2%;
+        right: -52.3%;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -58,12 +58,13 @@ export const LogoContainer = styled.div`
 
 export const Logo = styled.img`
     border-radius: 50%;
-    height: 40rem;
-    width: 40rem;
+    height: 35rem;
+    width: 35rem;
 
     @media screen and (min-device-width: 481px) and (max-device-width: 1024px) {
         height: 60rem;
         width: 60rem;
+        transform: rotate(-90deg);
     }
 `;
 

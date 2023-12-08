@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Close, Menu as MenuIcon } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
-
-import { Menu } from "@mui/material"
 import { Link } from "react-router-dom";
 
 export const HeaderContainer = styled.div`
@@ -31,20 +29,20 @@ export const LogoWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5.5rem;
-    width: 5.5rem;
+    height: 5rem;
+    width: 5rem;
     margin-left: 1rem;
 
     @media (max-width: 480px) {
         margin-left: 0.25rem;
         margin-right: 0.25rem;
-        height: 5rem;
-        width: 5rem;
+        height: 4.5rem;
+        width: 4.5rem;
     }
 
     @media screen and (min-device-width: 481px) and (max-device-width: 1024px) {
-        height: 6.5rem;
-        width: 6.5rem;
+        height: 5.5rem;
+        width: 5.5rem;
         margin-left: 0.5rem;
         padding-top: 0.25rem;
     }

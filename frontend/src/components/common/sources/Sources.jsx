@@ -15,7 +15,7 @@ import {
     RefWrapper,
     RefBox,
     RefIndex,
-    SourceLink
+    SourceLink,
 } from "./sourceStyles";
 
 export default function Sources({ data, line, color, title, background }) {
@@ -36,32 +36,32 @@ export default function Sources({ data, line, color, title, background }) {
                     </IconButton>
                     <Line right={0} line={line} />
                 </IconContainer>
-                    <RefContainer
-                        open={isDropdownOpen}
-                        color={color}
-                        background={background}
-                    >
-                        <RefWrapper>
-                            <SubTitle title={title}>
-                                {lang === 'ru' ? 'Литература' : (lang === 'tj' ? 'Адабиёт' : 'References')}
-                            </SubTitle>
-                            {data?.references[lang].map((source, i) => {
-                                return (
-                                    <RefBox key={i}>
-                                        <RefIndex>
-                                            <div>{i + 1}.</div>
-                                        </RefIndex>
-                                        <Reference dangerouslySetInnerHTML={{__html: source?.name}} />
-                                        {source?.link.length ? (
-                                            <SourceLink href={source?.link} target="_blank">
-                                                <OpenInNew />
-                                            </SourceLink>
-                                        ) : null}
-                                    </RefBox>   
-                                )
-                            })}
-                        </RefWrapper>
-                    </RefContainer>
+                <RefContainer
+                    open={isDropdownOpen}
+                    color={color}
+                    background={background}
+                >
+                    <RefWrapper open={isDropdownOpen}>
+                        <SubTitle title={title}>
+                            {lang === 'ru' ? 'Литература' : (lang === 'tj' ? 'Адабиёт' : 'References')}
+                        </SubTitle>
+                        {data?.references[lang].map((source, i) => {
+                            return (
+                                <RefBox key={i}>
+                                    <RefIndex>
+                                        <div>{i + 1}.</div>
+                                    </RefIndex>
+                                    <Reference dangerouslySetInnerHTML={{__html: source?.name}} />
+                                    {source?.link.length ? (
+                                        <SourceLink href={source?.link} target="_blank">
+                                            <OpenInNew />
+                                        </SourceLink>
+                                    ) : null}
+                                </RefBox>   
+                            )
+                        })}
+                    </RefWrapper>
+                </RefContainer>
             </DropDownContainer>
         </ClickAwayListener>
     )

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import {
     StyledDialog,
@@ -15,9 +16,24 @@ import {
 } from "./bookReaderStyles";
 
 export default function BookReader({ book, setOpenBook }) {
+    const [pdfUrl, setPdfUrl] = useState("");
+
     function closeReader() {
         setOpenBook(false);
     }
+
+    useEffect(() => {
+        const fileName = '/storage/poetBooks/ayni/tj/revolution.pdf';
+        axios.get(book.link, { responseType: 'arraybuffer' })
+            .then(response => {
+                const blob = new Blob([response.data], { type: 'application/pdf' });
+                const pdfUrl = URL.createObjectURL(blob);
+                setPdfUrl(pdfUrl);
+            })
+            .catch(error => {
+                console.error('Error fetching PDF file:', error);
+            });
+    }, []);
 
     return (
         <StyledDialog open={true} fullScreen>
@@ -36,7 +52,7 @@ export default function BookReader({ book, setOpenBook }) {
                     </StyledIconButton>
                 </IconWrapper>
             </Header>
-            <StyledFrame src={`https://drive.google.com/file/d/${book?.link}/preview`}></StyledFrame>
+            <StyledFrame src={`${pdfUrl}#toolbar=0`}></StyledFrame>
         </StyledDialog>
     )
 }

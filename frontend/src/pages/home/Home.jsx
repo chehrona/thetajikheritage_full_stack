@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { requestPage } from "../../services/request";
+
+import { stepInfo } from "./helper";
 
 import HomeStepper from '../../components/homeStepper/HomeStepper';
 import ImageBall from '../../components/imageBall/ImageBall';
@@ -10,21 +11,8 @@ function Home() {
     const containerRef = useRef(null);
     const divRefs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
     const [opacities, setOpacities] = useState([1, 0, 0, 0, 0]);
-    const [stepInfo, setStepInfo] = useState([]);
-
-    const fetchData = async () => {
-        try {
-            const data = await requestPage();
-            setStepInfo(data);
-        } catch (error) {
-            console.error("Error fetching data:", error);
-        }
-    };
 
     useEffect(() => {
-        // Get data
-        fetchData();
-
         // Scrolling
         const handleScroll = () => {
             const containerRect = containerRef.current.getBoundingClientRect();

@@ -44,16 +44,17 @@ export const StyledUpIcon = styled(ExpandLess)`
 `;
 
 export const RefContainer = styled.div`
-    background: ${({ background }) => background && background};
     max-width: 100%;
     margin-top: 0.8rem;
     border-radius: 1rem;
-    transition: all 0.5s linear 0s;
-    overflow-y: scroll;
     display: block;
+    position: relative;
+    transition: all 0.5s linear 0s;
     color: ${({ color }) => color && color};
     height: ${({ open }) => open ? "15rem" : "0rem"};
+    background: ${({ background }) => background && background};
     box-shadow: ${({ open, background }) => open && `0rem 0rem 0.4rem 0.01rem ${background}`};
+    display: flex;
 
     @media (max-width: 480px) {
         height: ${({ open }) => open ? "30rem" : "0rem"};
@@ -62,6 +63,18 @@ export const RefContainer = styled.div`
 
 export const RefWrapper = styled.div`
     padding: 1rem 2rem 1rem 2rem;
+    overflow-y: scroll;
+    margin: 0.5rem 0.25rem;
+    display: ${({ open }) => open ? "block" : "none"};
+
+    ::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #bd9d52;
+        border-radius: 0.25rem;
+    }
 
     @media (max-width: 480px) {
         padding: 1rem;
@@ -115,4 +128,11 @@ export const SourceLink = styled.a`
     &:link &:active {
         color: #bd9d52;
     }
+`;
+
+export const SpaceHolder = styled.div`
+    width: 0.5rem;
+    min-width: 1rem;
+    height: 100%;
+    background-color: green;
 `;

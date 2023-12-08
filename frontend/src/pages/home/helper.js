@@ -210,35 +210,32 @@ export const stepInfo = [
         text: {
             us: {text: "History", font: {d: 10.1, m: 6.25, t: 10}, margin: {d: 5, m: -15, t: 20}},
             ru: {text: "История", font: {d: 8.79, m: 5.4, t: 8.7}, margin: {d: 5, m: -15, t: 20}},
-            tj: {text: "Таърих", font: {d: 10.7, m: 6.7, t: 10.5}, margin: {d: 5, m: -16, t: 20}}
+            tj: {text: "Таърих", font: {d: 10.7, m: 6.7, t: 10.5}, margin: {d: 3.5, m: -16, t: 20}}
         },
         desc: {
             us: {
-                text: `Handicrafts serve as a tangible representation of the intellectual and aesthetic essence 
-                    of the Tajiks, intricately intertwined with their lifestyle, culture, and mythology.
-                    <div class='space'></div>
-                    There are nearly 500 unique arts and crafts still practiced within the Tajik communities, 
-                    many as old as the Eastern Iranian civilization itself.
+                text: `The Tajiks are indigenous people of Central Asia with a history spanning over two millennia. 
+                    As descendants of Sogdians, Bactrians and Khwarazmians, they were pivotal in establishing the early farming 
+                    traditions and trade practices in the region. Throughout centuries, Central Asia evolved into a crossroads of 
+                    civilizations, resulting in a Turco-Persian symbiosis, which sculpted the unique identity of the Tajik people. 
                     <div class='space'></div>
                     <div class='space'></div>`,
                 link: "/history"
                 },
             ru: {
-                text: `Традиционные ремесла таджиков являются воплощением и интеллектуального, и эстетического 
-                    наследия этого народа. Они неразрывно связаны с их образом жизни, культурой и мифологией.
-                    <div class='space'></div>
-                    В современных таджикских общинах до сих пор сохранилось около 500 уникальных видов 
-                    искусства и ремесел, многие из которых возникли наравне с формированием восточноиранской цивилизации.
+                text: `Таджики – коренной народ Центральной Азии, история которого насчитывает более двух тысячелетий. Будучи потомками 
+                    согдийцев, бактрийцев и хорезмийцев, они сыграли большую роль в установлении ранних традиций земледелия и торговли 
+                    в регионе. На протяжении веков Центральная Азия превратилась в перекресток цивилизаций, что привело к тюрко-персидскому 
+                    симбиозу, который сформировал уникальную идентичность таджикского народа.
                     <div class='space'></div>
                     <div class='space'></div>`,
                 link: "/history?ru"
                 },
             tj: {
-                text: `Ҳунарҳои мардумӣ ҳамчун намунаи моддии фикрӣ ва зебоишиносии тоҷикон хизмат мекунанд, 
-                    ки бо тарзи зиндагӣ, фарҳанг ва асотирии тоҷикон печида аст.
-                    <div class='space'></div>
-                    Дар байни тоҷикони олам то ҳол тахминан 500 намуди ҳунарҳои хос ва беҳамто вуҷуд доранд, 
-                    ки қадимии бисёрашон баробари қадимии тамаддуни эрониёни шарқӣ ҳастанд.
+                text: `Тоҷикон мардуми муқимии Осиёи Миёна буда, дорандаи таърихи беш аз ду ҳазорсола ҳастанд. Онҳо ҳамчун насли суғдиён, 
+                    бохтариён ва хоразмиён ба ташаккули анъанаҳои нахустини кишоварзӣ ва тиҷорат дар минтақа ҳиссаи бузурге гузоштаанд. Дар давоми 
+                    садсолаҳо, Осиёи Марказӣ ба чорроҳаи тамаддунҳо табдил ёфта, ки дар натиҷа симбиози турку форс ба вуҷуд омада, ба  
+                    худшиносии мардуми тоҷик таъсири бузурге расонидааст.
                     <div class='space'></div>
                     <div class='space'></div>`,
                 link: "/history?tj"
