@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSetLang } from '../../../App';
 
 import {
     BoxOne,
@@ -10,16 +11,18 @@ import {
 } from './poetBioStyles';
 
 export default function FirstBox({ poet }) {
+    const { lang } = useSetLang();
+
     return (
         <BoxOne>
             <LeftContainer>
-                <Year color={'#000'}>{poet?.year}</Year>
-                <Desc dangerouslySetInnerHTML={{__html: poet?.desc}} />
+                <Year color={'#000'}>{poet[lang].year}</Year>
+                <Desc dangerouslySetInnerHTML={{__html: poet[lang].desc}} />
             </LeftContainer>
-            <RightContainer src={poet?.slides.img} first={1} />
+            <RightContainer src={poet?.img} first={1} />
             <ImgInfo
                 up={1}
-                dangerouslySetInnerHTML={{__html: poet?.slides.text}} 
+                dangerouslySetInnerHTML={{__html: poet[lang].imgDesc}} 
             />
         </BoxOne>
     )

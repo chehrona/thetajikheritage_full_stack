@@ -14,16 +14,11 @@ import {
     NumSpan,
     Overlay
 } from "./poetIntroStyles";
-// import { request } from "../../../services/request";
 
 export default function PoetIntro({ poet, scrollToView }) {
     const { lang } = useSetLang();
     const yearOne = poet?.years[lang][0].split('');
     const yearTwo = poet?.years[lang][1].split('');
-
-    // useEffect(() => {
-    //     request();
-    // }, [])
 
     return (
         <MainContainer>

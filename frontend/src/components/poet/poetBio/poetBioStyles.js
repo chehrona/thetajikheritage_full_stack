@@ -351,7 +351,7 @@ export const QuoteSymbol = styled.div`
     width: 100%;
     color: #bd9d52;
     transform: rotateZ(180deg);
-    background-image: url('/poetImages/quote.svg');
+    background-image: url('/quote.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 60%;

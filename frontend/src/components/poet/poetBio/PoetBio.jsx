@@ -17,7 +17,7 @@ export default function PoetBio({ poet }) {
  
     return (
         <MainContainer id='Biography'>
-            <FirstBox poet={poet?.bio.one[lang]} />
+            <FirstBox poet={poet?.bio.one} />
             <SecondBox poet={poet?.bio} />
             <ThirdBox poet={poet?.bio} />
             <FifthBox poet={poet?.bio} />
