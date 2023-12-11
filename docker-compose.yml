@@ -13,10 +13,14 @@ services:
     ports:
       - "8000:8000"
     restart: always
+    links:
+      - mongo
 
   # Create database container
   db:
     image: mongo
     ports:
-      - "27017:27017"
+      - "27018:27017"
+    volumes:
+      - ./data:/data/db
     restart: always
