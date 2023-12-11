@@ -14,7 +14,7 @@ services:
       - "8000:8000"
     restart: always
     links:
-      - mongo
+      - db
 
   # Create database container
   db:
