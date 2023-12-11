@@ -15,6 +15,7 @@ app.use(cors(corsOptions));
 // Routes
 const languageRoutes = require('./routes/languageRoutes');
 const cuisineRoutes = require('./routes/cuisineRoutes');
+const customRoutes = require('./routes/customRoutes');
 
 const db = require("./models");
 db.mongoose
@@ -43,6 +44,7 @@ app.use('/storage', createProxyMiddleware({ target: 'http://localhost:3000', cha
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Use route files
+app.use('/language', customRoutes);
 app.use('/language', languageRoutes);
 app.use('/cuisine', cuisineRoutes);
 
