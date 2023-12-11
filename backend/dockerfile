@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 8000
 
 # Command to run our app
-CMD ['node', 'server.js']
+CMD [ "npm", "start"]
