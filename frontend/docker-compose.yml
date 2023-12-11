@@ -3,7 +3,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "3000:3000" # Bind port 3000 of host to 3000 of container
+      - "3001:3001" # Bind port 3000 of host to 3000 of container
     container_name: frontend-docker
     restart: always
     links:
