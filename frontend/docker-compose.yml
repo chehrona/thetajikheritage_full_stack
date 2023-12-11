@@ -22,6 +22,6 @@ services:
   db:
     image: mongo
     ports:
-    - "5432:5432"
+    - "27017:27017"
     container_name: database-docker
     restart: always
