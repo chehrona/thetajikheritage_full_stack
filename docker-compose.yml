@@ -1,5 +1,6 @@
 version: '3'
 services:
+
   # Create frontend container
   frontend:
     build: ./frontend
@@ -20,7 +21,7 @@ services:
   db:
     image: mongo
     ports:
-      - "27018:27017"
+      - "27017:27017"
     volumes:
       - ./data:/data/db
     restart: always

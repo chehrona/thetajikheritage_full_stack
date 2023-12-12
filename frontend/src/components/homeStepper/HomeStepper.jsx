@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSetLang } from "../../App";
 import { useMediaQuery } from 'react-responsive';
 
-import { stepInfo } from "../../pages/home/helper"; 
+import { stepInfo } from "../../landingPages/home/helper"; 
 
 import {
     MainContainer,

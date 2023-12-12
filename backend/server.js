@@ -13,11 +13,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Routes
-const languageRoutes = require('./routes/languageRoutes');
-const cuisineRoutes = require('./routes/cuisineRoutes');
-const customRoutes = require('./routes/customRoutes');
+const languageRoutes = require('./src/routes/languageRoutes');
+const cuisineRoutes = require('./src/routes/cuisineRoutes');
+const customsRoutes = require('./src/routes/customsRoutes');
 
-const db = require("./models");
+const db = require("./src/models");
 db.mongoose
     .connect(db.url, {
         useNewUrlParser: true,
@@ -44,7 +44,7 @@ app.use('/storage', createProxyMiddleware({ target: 'http://localhost:3001', cha
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Use route files
-app.use('/language', customRoutes);
+app.use('/customs', customsRoutes);
 app.use('/language', languageRoutes);
 app.use('/cuisine', cuisineRoutes);
 

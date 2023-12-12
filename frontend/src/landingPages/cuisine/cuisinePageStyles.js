@@ -16,7 +16,6 @@ export const PageContainer = styled.div`
     }
 `;
 
-
 export const RecipeBoxContainer = styled.div`
     gap: 3rem;
     display: flex;

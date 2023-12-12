@@ -7,8 +7,8 @@ exports.getAllCreatures = async (req, res) => {
         const creatureIntro = creatures.map((creature) => {
             return {
                 id: creature.id,
-                name: creature.title,
-                img: creature.mainImg,
+                name: creature.name,
+                img: creature.img,
                 sound: creature.sound
             }
         });

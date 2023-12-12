@@ -4,19 +4,19 @@ import { useSetLang } from "../../App";
 
 import { requestPage } from "../../services/request";
 
-import RecipeCard from '../../components/food/recipeCard/RecipeCard';
+import MythCard from '../../components/myths/mythCard/MythCard';
 
-import { PageContainer, RecipeBoxContainer } from './cuisinePageStyles';
+import { PageContainer, MythBoxContainer } from './customsPageStyles';
 
-function Cuisine() {
+function Customs() {
     const location = useLocation();
     const { setLang } = useSetLang();
-    const [recipes, setRecipes] = useState([]);
+    const [myths, setMyths] = useState([]);
 
     const fetchData = async () => {
         try {
-            const data = await requestPage("cuisine");
-            setRecipes(data);
+            const data = await requestPage("customs");
+            setMyths(data);
         } catch (error) {
             console.error("Error fetching data:", error);
         }
@@ -31,17 +31,15 @@ function Cuisine() {
         }
     }, []);
 
-    console.log(recipes, "recipes");
-
     return (
         <PageContainer>
-            <RecipeBoxContainer>
-                {recipes?.map((recipe, i) => {
-                    return (<RecipeCard key={i} recipe={recipe} i={i} />);
+            <MythBoxContainer justify={myths?.length}>
+                {myths?.map((myth, i) => {
+                    return (<MythCard key={i} myth={myth} i={i} />);
                 })}
-            </RecipeBoxContainer>
+            </MythBoxContainer>
         </PageContainer>
     );
 }
 
-export default Cuisine;
+export default Customs;

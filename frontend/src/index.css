@@ -70,7 +70,7 @@ body * {
     display: flex;
     pointer-events: none;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
     padding: 0rem 0rem 1rem 0.3rem;
 }
 

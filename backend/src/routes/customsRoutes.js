@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { getAllCreatures, getCreature } = require('../controllers/customController');
+const { getAllCreatures, getCreature } = require('../controllers/customsController');
 
 router.get('/', getAllCreatures);
-router.get('/recipes/', getCreature);
+router.get('/myths/', getCreature);
 
 module.exports = router;
