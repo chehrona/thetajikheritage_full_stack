@@ -18,34 +18,31 @@ const slideOut = keyframes`
 
 export const MythCardWrapper = styled.div`
     opacity: 0;
+    height: 25rem;
+    width: 25rem;
     color: #0F0A00;
     cursor: pointer;
     position: relative;
-    animation: ${slideOut} 1s ease-in-out forwards;
-    animation-delay: ${({ delay }) => delay ? delay : '0s'};
-`;
-
-export const MythImage = styled.img`
-    height: 25rem;
-    width: 25rem;
     border-radius: 0.7rem;
+    animation: ${slideOut} 1s ease-in-out forwards;
     transition: border-radius 250ms, box-shadow 400ms;
+    animation-delay: ${({ delay }) => delay ? delay : '0s'};
 
     &:hover {
-        border-radius: 1.5rem;
         box-shadow: 0rem 0rem 0.6rem #504221d1;
-        transition: border-radius 250ms, box-shadow 400ms;
     }
 
     @media (max-width: 480px) {
-        height: 19.025rem;
-        width: 12.5rem;
+        height: 13rem;
+        width: 13rem;
         box-shadow: 0rem 0rem 0.6rem #504221d1;
-
-        &:hover {
-            border-radius: 0.7rem;
-        }
     }
+`;
+
+export const MythImage = styled.img`
+    height: 100%;
+    width: 100%;
+    border-radius: 0.7rem;
 `;
 
 export const StyledLink = styled(Link)`

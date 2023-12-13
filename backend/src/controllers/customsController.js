@@ -9,7 +9,7 @@ exports.getAllCreatures = async (req, res) => {
                 id: creature.id,
                 name: creature.name,
                 img: creature.img,
-                sound: creature.sound
+                background: creature.background
             }
         });
 

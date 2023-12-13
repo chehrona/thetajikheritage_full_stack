@@ -1,4 +1,4 @@
-import { useContext, createContext, useMemo, useState, useRef } from 'react';
+import { useContext, createContext, useMemo, useState, useRef, useEffect } from 'react';
 import Header from './components/common/header/Header';
 import Menu from './components/common/menu/Menu';
 import Footer from './components/common/footer/Footer';
@@ -31,6 +31,16 @@ function App() {
             isPrint, setIsPrint
         }
     ), [lang, isPrint]);
+
+    useEffect(() => {
+        const handleContextmenu = e => {
+            e.preventDefault()
+        }
+        document.addEventListener('contextmenu', handleContextmenu)
+        return function cleanup() {
+            document.removeEventListener('contextmenu', handleContextmenu)
+        }
+    }, []);
 
     const handleScroll = () => {
         const currentScrollPos = parentRef.current.scrollTop;

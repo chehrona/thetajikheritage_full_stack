@@ -6,6 +6,7 @@ services:
     build: ./frontend
     ports:
       - "3001:3001"
+      # - "8000:8000"
     restart: always
 
   # Create backend container
@@ -14,7 +15,7 @@ services:
     ports:
       - "8000:8000"
     restart: always
-    links:
+    depends_on:
       - db
 
   # Create database container
