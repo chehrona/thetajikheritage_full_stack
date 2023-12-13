@@ -41,3 +41,4 @@ data/diagnostic.data/metrics.2023-12-12T18-34-05Z-00000
 data/diagnostic.data/metrics.2023-12-12T18-24-19Z-00000
 data/.mongodb/mongosh/6579d692e4974f2bf7bd525c_log
 data/.mongodb/mongosh/6579d6bf0a475c2e9c147956_log
+backend/config/db.config.js
