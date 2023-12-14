@@ -2,7 +2,7 @@ import { useContext, createContext, useMemo, useState, useRef, useEffect } from 
 import Header from './components/common/header/Header';
 import Menu from './components/common/menu/Menu';
 import Footer from './components/common/footer/Footer';
-import AnimationRoutes from './components/common/animationRoutes/AnimationRoutes';
+import Routes from './components/common/routes/Routes';
 import Flags from './components/common/flags/Flags';
 import ScrollUpArrow from './components/common/scrollUpArrow/ScrollUpArrow';
 
@@ -60,7 +60,7 @@ function App() {
             <div className='content-container' ref={parentRef} onScroll={handleScroll}>
                 {!isPrint && <Header setIsMenuShown={setIsMenuShown} isMenuShown={isMenuShown} />}
                 <Menu setIsMenuShown={setIsMenuShown} isMenuShown={isMenuShown} />
-                <AnimationRoutes />
+                <Routes />
                 <div className='fixed-container'>
                     {!isPrint && <Flags />}
                     {showArrow ? <ScrollUpArrow parentRef={parentRef} /> : null}
