@@ -6,8 +6,12 @@ services:
     build: ./frontend
     ports:
       - "3001:3001"
-      # - "8000:8000"
     restart: always
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
 
   # Create backend container
   backend:  
@@ -17,6 +21,9 @@ services:
     restart: always
     depends_on:
       - db
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
 
   # Create database container
   db:

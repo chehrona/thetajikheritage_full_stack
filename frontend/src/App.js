@@ -34,7 +34,7 @@ function App() {
 
     useEffect(() => {
         const handleContextmenu = e => {
-            e.preventDefault()
+            e.preventDefault();
         }
         document.addEventListener('contextmenu', handleContextmenu)
         return function cleanup() {
