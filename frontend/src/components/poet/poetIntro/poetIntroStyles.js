@@ -1,13 +1,4 @@
-import styled, { keyframes } from "styled-components/macro";
-
-const zoomIn = keyframes`
-    from {
-        transform: scale(1.5);
-    }
-    to {
-        transform: scale(1);
-    }
-`;
+import styled, { keyframes } from "styled-components";
 
 const slideOut = keyframes`
     0% {
@@ -87,9 +78,6 @@ export const FadedImage = styled.img`
     background: #0F0A00;
     transform-origin: center;
     border-radius: 5rem 4rem 0rem 5rem;
-    animation: ${zoomIn} 0.5s ease-out;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
 
     @media (max-width: 480px) {
         width: 100%;

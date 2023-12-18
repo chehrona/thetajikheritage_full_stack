@@ -9,7 +9,6 @@ exports.getAllCreatures = async (req, res) => {
                 id: creature.id,
                 name: creature.name,
                 img: creature.img,
-                background: creature.background
             }
         });
 
@@ -24,7 +23,7 @@ exports.getCreature = async (req, res) => {
     const id = req.query.id;
 
     try {
-        const creature = await creature.findOne({ id: id });
+        const creature = await Creature.findOne({ id: id });
 
         if (!creature) {
             return res.status(404).json({ message: 'Creature not found' });

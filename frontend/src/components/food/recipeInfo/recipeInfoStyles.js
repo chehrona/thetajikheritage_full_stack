@@ -48,7 +48,7 @@ export const InfoContainer = styled.div`
 export const MainTitle = styled.div`
     opacity: 0;
     color: #000;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 500;
     font-style: italic;
     margin-bottom: 0.5rem;

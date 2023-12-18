@@ -32,3 +32,14 @@ export const requestRecipe = async (id) => {
         throw error;
     }
 };
+
+export const requestMyth = async (id) => {
+    try {
+        const response = await axios.get(`http://localhost:8000/customs/myths`, {
+            params: {id : id}
+        });
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+};

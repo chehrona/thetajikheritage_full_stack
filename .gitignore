@@ -1,2 +1,4 @@
 backend/config/db.config.js
 data
+backend/.DS_Store
+.DS_Store

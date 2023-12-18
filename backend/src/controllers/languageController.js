@@ -13,7 +13,7 @@ exports.getAllPoets = async (req, res) => {
                 img: poet.img.card,
             }
         });
-
+        
         res.json(poetIntro);
     } catch (error) {
         console.error(error);
