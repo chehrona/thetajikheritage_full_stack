@@ -12,7 +12,6 @@ import {
     PageContainer,
     MythContainer,
 } from "./mythPageStyles";
-import BoxThree from "../../components/myths/mythIntro/ThirdBox";
 
 export default function MythPage() {
     const { id } = useParams();
@@ -37,9 +36,12 @@ export default function MythPage() {
         return (
             <PageContainer>
                 <MythContainer>
-                    <BoxOne myth={myth?.desc[lang]} />
-                    <BoxTwo myth={myth?.desc[lang]} />
-                    <BoxThree myth={myth?.desc[lang]} />
+                    <BoxOne myth={myth?.desc[lang].sections[0]} title={myth.name[lang]} />
+                    <BoxTwo myth={myth?.desc[lang].sections[1]} padding={0} />
+                    <BoxOne myth={myth?.desc[lang].sections[2]} padding={0} />
+                    <BoxTwo myth={myth?.desc[lang].sections[3]} padding={0} />
+                    <BoxOne myth={myth?.desc[lang].sections[4]} padding={0} />
+                    <BoxTwo myth={myth?.desc[lang].sections[5]} padding={0} />
                 </MythContainer>
             </PageContainer>
         );

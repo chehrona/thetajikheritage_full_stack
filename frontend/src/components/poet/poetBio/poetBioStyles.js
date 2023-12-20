@@ -441,8 +441,8 @@ export const ImageWrapper = styled.div`
 export const ButtonWrapper = styled.div`
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     width: 100%;
+    transform: translateY(-50%);
 `;
 
 // Box six ********************************

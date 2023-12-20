@@ -21,6 +21,7 @@ export const MythContainer = styled.div`
     background: #fcf6e9;
     background-image: url(${'/noise.png'});
     box-shadow: 0.8rem 0.5rem 0rem 0.08rem #504221d1;
+    padding-top: 0.75rem;
 
     @media (max-width: 480px) {
         margin: 0rem;

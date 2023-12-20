@@ -1,30 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
+import Slideshow from "../../common/slideshow/Slideshow";
 import { DescWrapper } from "../../common/descWrapper/DescWrapper";
 
 import { 
     BoxWrapper,
-    Image,
     Title,
     FirstBox,
     Subtitle,
     TextContainer,
-    ImgInfo,
-    ImageWrapper
+    RightContainer
 } from "./mythIntroStyles";
 
-export default function BoxOne({ myth }) {
+export default function BoxOne({ myth, title }) {
+    const parentRef = useRef(null);
+    const [screenSize, setScreenSize] = useState(0);
+
+    useEffect(() => {
+        const parentWidth = parentRef?.current?.getBoundingClientRect().width;
+
+        setScreenSize(parentWidth);
+    }, []);
 
     return (
-        <BoxWrapper resverse={0}>
-            <ImageWrapper>
-                <Image src={myth.slides[0].src} />
-                <ImgInfo dangerouslySetInnerHTML={{ __html: myth.slides[0].info}} />
-            </ImageWrapper>
+        <BoxWrapper reverse={0}>
+            <RightContainer ref={parentRef}>
+                <Slideshow
+                    screenSize={screenSize}
+                    slides={myth?.slides}
+                />
+            </RightContainer>
             <TextContainer>
-                <Title>{myth.title}</Title>
-                <Subtitle>{myth.sections[0].subtitle}</Subtitle>
-                <DescWrapper desc={myth.sections[0].body} TextWrapper={FirstBox} />
+                {title && <Title>{title}</Title>}
+                <Subtitle>{myth.subtitle}</Subtitle>
+                <DescWrapper desc={myth.body} TextWrapper={FirstBox} />
             </TextContainer>
         </BoxWrapper>
     );
