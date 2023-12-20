@@ -7,7 +7,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 // Correct CORS Options declaration
 const corsOptions = {
-  origin: "http://thetajikheritage:3001"
+  origin: "http://localhost:3001"
 };
 
 app.use(cors(corsOptions));
@@ -36,11 +36,9 @@ app.use(bodyParser.json());
 
 // Serve static files from the 'pdfs' directory
 app.use('/storage', express.static(path.join(__dirname, 'storage')));
-app.use('/', express.static(path.join(__dirname, 'build')));
 
 // Proxy requests to '/pdfs' to another server (your React app in development)
-app.use('/storage', createProxyMiddleware({ target: 'http://thetajikheritage:3001', changeOrigin: true }));
-app.use('/', createProxyMiddleware({ target: 'http://thetajikheritage:3001', changeOrigin: true }));
+app.use('/storage', createProxyMiddleware({ target: 'http://localhost:3001', changeOrigin: true }));
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
