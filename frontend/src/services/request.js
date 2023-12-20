@@ -4,7 +4,7 @@ export const requestPage = async (url) => {
     if (!url) url = "";
     
     try {
-        const response = await axios.get(`http://localhost:8000/${url}`);
+        const response = await axios.get(`http://localhost:8000/api/${url}`);
         return response.data;
     } catch (error) {
         throw error;
@@ -13,7 +13,7 @@ export const requestPage = async (url) => {
 
 export const requestPoet = async (id) => {
     try {
-        const response = await axios.get(`http://localhost:8000/language/poets`, {
+        const response = await axios.get(`http://localhost:8000/api/language/poets`, {
             params: {id : id}
         });
         return response.data;
@@ -24,7 +24,7 @@ export const requestPoet = async (id) => {
 
 export const requestRecipe = async (id) => {
     try {
-        const response = await axios.get(`http://localhost:8000/cuisine/recipes`, {
+        const response = await axios.get(`http://localhost:8000/api/cuisine/recipes`, {
             params: {id : id}
         });
         return response.data;
@@ -35,7 +35,7 @@ export const requestRecipe = async (id) => {
 
 export const requestMyth = async (id) => {
     try {
-        const response = await axios.get(`http://localhost:8000/customs/myths`, {
+        const response = await axios.get(`http://localhost:8000/api/customs/myths`, {
             params: {id : id}
         });
         return response.data;
